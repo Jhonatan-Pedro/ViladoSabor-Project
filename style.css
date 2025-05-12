@@ -1,0 +1,805 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', sans-serif;
+    line-height: 1.6;
+    color: #4A2C2A;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+/* Ajuste do cabeçalho */
+#header {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 90px; /* Increased from 40px to 90px */
+    border-radius: 10px;
+}
+
+/* Ajuste da barra de navegação */
+#nav {
+    display: flex; /* Alinha os itens em linha */
+    gap: 30px; /* Espaçamento entre os itens */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    position: relative;
+    padding: 10px 0; /* Adiciona espaçamento interno */
+    flex-grow: 1; /* Faz o nav ocupar o espaço disponível */
+}
+
+/* Ajuste dos links */
+#nav a, .dropdown {
+    display: inline-block; /* Garante que os links e dropdowns fiquem em linha */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 15px; /* Adiciona espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado */
+    color: #333; /* Cor do texto */
+    font-weight: 500; /* Peso da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Animação suave */
+}
+
+/* Ajuste para hover */
+#nav a:hover, .dropdown:hover > a {
+    background-color: #F4C2C2; /* Cor de fundo ao passar o mouse */
+    color: #4A2C2A; /* Cor do texto ao passar o mouse */
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Estilo para o dropdown */
+.dropdown summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #fff; /* Cor de fundo padrão */
+    color: #4A2C2A; /* Cor do texto */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none; /* Remove o contorno branco */
+}
+
+.dropdown summary:hover {
+    background-color: #E8AFAF; /* Cor de fundo mais suave no hover */
+    color: #4A2C2A; /* Mantém a cor do texto */
+}
+
+.dropdown-menu {
+    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o menu */
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 1px solid #fff; /* Linha separadora entre os itens */
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+.dropdown-menu a:hover {
+    background-color: #F4C2C2; /* Cor de fundo mais suave no hover */
+    color: #4A2C2A; /* Cor do texto no hover */
+}
+
+
+
+/* Remove o fundo branco do <summary> e ajusta para combinar com a barra de navegação */
+details summary {
+    background-color: #fff; /* Mesma cor da barra de navegação */
+    color: #4A2C2A; /* Cor do texto */
+    border: none; /* Remove bordas padrão */
+    padding: 10px 15px; /* Adiciona espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de clique */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo ao passar o mouse no <summary> */
+details summary:hover {
+    background-color: #E8AFAF; /* Cor mais suave no hover */
+    color: #4A2C2A; /* Mantém a cor do texto */
+}
+
+/* Remove o estilo padrão do <details> quando está aberto */
+details[open] summary {
+    background-color: #E8AFAF; /* Cor ao abrir o menu */
+    color: #4A2C2A;
+}
+
+/* Ajusta o menu dropdown */
+details .dropdown-menu {
+    background-color: #fff; /* Mesma cor da barra de navegação */
+    padding: 10px 0; /* Espaçamento interno */
+    margin-top: 10px; /* Espaçamento entre o botão e o menu */
+    box-shadow: none; /* Remove a sombra */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilo dos links dentro do menu */
+details .dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #4A2C2A; /* Cor do texto */
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover nos links do menu */
+details .dropdown-menu a:hover {
+    background-color: #E8AFAF; /* Cor mais suave no hover */
+    color: #4A2C2A; /* Cor do texto no hover */
+}
+
+.dropdown-toggle {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    content: "▼";
+    font-size: 0.7em;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.dropdown-toggle:hover {
+    color: #EA1D2C;
+    background-color: #F4F4F4;
+}
+
+.dropdown-toggle:hover::after {
+    color: #EA1D2C;
+}
+
+/* Ajuste do conteúdo principal */
+main {
+    margin-top: 60px;
+}
+
+#inicio {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #F4C2C2;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(74, 44, 42, 0.7), rgba(74, 44, 42, 0.7));
+    z-index: 2;
+}
+
+#inicio h2, #inicio .btn-cta {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#inicio h2 {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+
+#inicio .btn-cta {
+    background-color: #F4C2C2;
+    color: #4A2C2A;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+#inicio .btn-cta:hover {
+    background-color: #E6A8A8;
+}
+
+/* Seções */
+#cardapio, #galeria, #horarios, #localizacao, #dicas, #central-ajuda, #faq, #equipe, #avaliacoes, #sobre, #contato {
+    padding: 80px 40px;
+    background-color: #FFFFFF;
+}
+
+#cardapio h2, #galeria h2, #horarios h2, #localizacao h2, #dicas h2, #central-ajuda h2, #faq h2, #equipe h2, #avaliacoes h2, #sobre h2, #contato h2 {
+    font-size: 2.8em;
+    color: #4A2C2A;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Cardápio */
+#cardapio {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categoria {
+    margin-bottom: 60px;
+}
+
+.categoria h3 {
+    font-size: 2em;
+    color: #4A2C2A;
+    margin-bottom: 20px;
+}
+
+.itens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.item-card {
+    background-color: #F9F1F1;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D9C2C2;
+}
+
+.item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.item-card .categoria-icone {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+}
+
+.item-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: filter 0.3s ease;
+}
+
+.item-card img:hover {
+    filter: brightness(1.1);
+}
+
+.item-card h4 {
+    font-size: 1.4em;
+    color: #4A2C2A;
+}
+
+.item-card p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.item-card .preco {
+    font-weight: 700;
+    color: #4A2C2A;
+}
+
+/* Galeria */
+#galeria {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Horários */
+#horarios {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.horarios-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #F9F1F1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.horarios-table th, .horarios-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #D9C2C2;
+}
+
+.horarios-table th {
+    background-color: #F4C2C2;
+    color: #4A2C2A;
+    font-weight: 700;
+}
+
+.horarios-table td {
+    color: #666;
+}
+
+/* Localização */
+#localizacao {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#localizacao p {
+    font-size: 1.1em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#localizacao iframe {
+    border-radius: 10px;
+}
+
+/* Dicas Saudáveis */
+#dicas {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dicas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.dica {
+    background-color: #F9F1F1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.dica:hover {
+    transform: translateY(-5px);
+}
+
+.dica .icone {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.dica h4 {
+    font-size: 1.4em;
+    color: #4A2C2A;
+    margin-bottom: 10px;
+}
+
+.dica p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Central de Ajuda */
+#central-ajuda {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#central-ajuda p, #central-ajuda ul {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#central-ajuda ul {
+    list-style: none;
+    padding: 0;
+}
+
+#central-ajuda ul li {
+    margin-bottom: 10px;
+}
+
+#central-ajuda a {
+    color: #EA1D2C;
+    text-decoration: none;
+}
+
+#central-ajuda a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ */
+#faq {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+details {
+    margin-bottom: 15px;
+    background-color: #F9F1F1;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+summary {
+    font-size: 1.2em;
+    color: #4A2C2A;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+details p {
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Equipe */
+#equipe {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.perfil {
+    background-color: #F9F1F1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.perfil:hover {
+    transform: translateY(-5px);
+}
+
+.perfil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.perfil h4 {
+    font-size: 1.4em;
+    color: #4A2C2A;
+}
+
+.perfil p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Avaliações */
+#avaliacoes {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.avaliacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.avaliacao {
+    background-color: #F9F1F1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.avaliacao:hover {
+    transform: translateY(-5px);
+}
+
+.avaliacao h4 {
+    font-size: 1.4em;
+    color: #4A2C2A;
+}
+
+.avaliacao .estrelas {
+    font-size: 1.2em;
+    color: #FFD700;
+    margin: 10px 0;
+}
+
+.avaliacao p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Sobre */
+#sobre {
+    max-width: 900px;
+    margin: 0 auto;
+    border-left: 2px solid #F4C2C2;
+    animation: fadeInUp 1s ease-out;
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sobre-content p {
+    flex: 1;
+}
+
+.sobre-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.sobre-image:hover {
+    transform: translateX(20px) scale(1.05);
+}
+
+/* Contato */
+#contato {
+    max-width: 700px;
+    margin: 0 auto;
+    border-right: 2px solid #F4C2C2;
+    animation: fadeInUp 1s ease-out;
+}
+
+#contato .info {
+    margin-bottom: 30px;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contato label {
+    font-size: 1.1em;
+    color: #4A2C2A;
+    font-weight: 500;
+}
+
+#contato input,
+#contato select,
+#contato textarea {
+    padding: 12px;
+    border: 1px solid #D9C2C2;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+#contato input:focus,
+#contato select:focus,
+#contato textarea:focus {
+    border-color: #F4C2C2;
+    outline: none;
+}
+
+#contato button {
+    background-color: #F4C2C2;
+    color: #4A2C2A;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+#contato button:hover {
+    background-color: #E6A8A8;
+}
+
+/* Footer */
+#footer {
+    background-color: #4A2C2A;
+    color: #F4C2C2;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#footer .social-links {
+    display: flex;
+    gap: 20px;
+}
+
+#footer a {
+    color: #F4C2C2;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+#footer a:hover {
+    color: #FFFFFF;
+}
+
+/* Animação */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        height: 60px; /* Adjusted for smaller screens */
+    }
+
+    #nav {
+        gap: 8px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav a {
+        font-size: 0.9em;
+        padding: 6px 10px;
+    }
+
+    .dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        background-color: #F4F4F4;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        padding: 8px;
+        text-align: center;
+    }
+
+    main {
+        margin-top: 120px;
+    }
+
+    #inicio h2 {
+        font-size: 2.5em;
+    }
+
+    #cardapio, #galeria, #horarios, #localizacao, #dicas, #central-ajuda, #faq, #equipe, #avaliacoes, #sobre, #contato {
+        padding: 40px 20px;
+    }
+
+    .itens-grid, .galeria-grid, .dicas-grid, .equipe-grid, .avaliacoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-image {
+        margin: 20px auto;
+    }
+
+    #sobre, #contato {
+        border: none;
+    }
+}

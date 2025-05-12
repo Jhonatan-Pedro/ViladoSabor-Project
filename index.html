@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vila do Sabor - Restaurante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <img src="./img/Logo.png" alt="Logo Vila do Sabor" class="logo">
+        <nav id="nav">
+            <a href="#inicio">Início</a>
+            
+            <details class="dropdown">
+                <summary class="dropdown-toggle">Como Funciona</summary>
+                <div class="dropdown-menu">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#cardapio">Cardápio</a>
+                    <a href="#galeria">Galeria</a>
+                    <a href="#horarios">Horários</a>
+                    <a href="#localizacao">Localização</a>
+                    <a href="#dicas">Dicas Saudáveis</a>
+                    <a href="#equipe">Equipe</a>
+                    <a href="#avaliacoes">Avaliações</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </details>
+            
+            <details class="dropdown">
+                <summary class="dropdown-toggle">Ajuda</summary>
+                <div class="dropdown-menu">
+                    <a href="#central-ajuda">Central de Ajuda</a>
+                    <a href="#faq">Perguntas Frequentes</a>
+                </div>
+            </details>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <video autoplay loop muted playsinline class="background-video">
+                <source src="./video/animação.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="overlay"></div>
+            <h2>Bem-vindo ao Vila do Sabor!</h2>
+            <a href="#cardapio" class="btn-cta">Explore o Menu</a>
+        </section>
+
+        <section id="cardapio">
+            <h2>Nosso Cardápio</h2>
+            <div class="categoria">
+                <h3>Lanches</h3>
+                <div class="itens-grid">
+                    <div class="item-card">
+                        <span class="categoria-icone">🍔</span>
+                        <img src="./img/Hamburguer Classico.jfif" alt="Hambúrguer Clássico">
+                        <h4>Hambúrguer Clássico</h4>
+                        <p>Hambúrguer artesanal, queijo prato, alface, tomate e maionese da casa no pão brioche.</p>
+                        <p class="preco">R$ 28,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍔</span>
+                        <img src="./img/Egg Burguer.jfif" alt="Egg Burguer da Vila">
+                        <h4>Egg Burguer da Vila</h4>
+                        <p>Hambúrguer artesanal, ovo frito, muçarela derretida e maionese temperada.</p>
+                        <p class="preco">R$ 30,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍔</span>
+                        <img src="./img/Veggie Burguer.jfif" alt="Veggie Burger">
+                        <h4>Veggie Burger</h4>
+                        <p>Hambúrguer de grão-de-bico, rúcula, tomate seco e molho de iogurte no pão integral.</p>
+                        <p class="preco">R$ 27,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍔</span>
+                        <img src="./img/Chicken Burguer.jfif" alt="Chicken Burger">
+                        <h4>Chicken Burger</h4>
+                        <p>Frango crocante, alface americana, queijo cheddar e molho barbecue.</p>
+                        <p class="preco">R$ 29,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍔</span>
+                        <img src="./img/Double Smash.jfif" alt="Double Smash">
+                        <h4>Double Smash</h4>
+                        <p>Dois hambúrgueres artesanais, queijo muçarela, bacon crocante e maionese picante.</p>
+                        <p class="preco">R$ 34,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="categoria">
+                <h3>Massas & Molhos</h3>
+                <div class="itens-grid">
+                    <div class="item-card">
+                        <span class="categoria-icone">🍝</span>
+                        <img src="./img/Espaguete.jfif" alt="Espaguete ao Sugo">
+                        <h4>Espaguete ao Sugo</h4>
+                        <p>Macarrão artesanal ao molho de tomate rústico com toque de manjericão.</p>
+                        <p class="preco">R$ 26,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍝</span>
+                        <img src="./img/Penne Quatro Queijos.jfif" alt="Penne Quatro Queijos">
+                        <h4>Penne Quatro Queijos</h4>
+                        <p>Molho cremoso com parmesão, muçarela, gorgonzola e requeijão.</p>
+                        <p class="preco">R$ 30,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍝</span>
+                        <img src="./img/Ravióli de ricota.jfif" alt="Ravioli de Ricota">
+                        <h4>Ravioli de Ricota</h4>
+                        <p>Ravioli recheado com ricota e espinafre, servido com molho pesto.</p>
+                        <p class="preco">R$ 32,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍝</span>
+                        <img src="./img/Lasanha.jfif" alt="Lasanha à Bolonhesa">
+                        <h4>Lasanha à Bolonhesa</h4>
+                        <p>Camadas de massa, molho bolonhesa, queijo muçarela e bechamel.</p>
+                        <p class="preco">R$ 34,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍝</span>
+                        <img src="./img/Fettuccine Alfredo.jfif" alt="Fettuccine Alfredo">
+                        <h4>Fettuccine Alfredo</h4>
+                        <p>Fettuccine com molho cremoso de parmesão e toque de alho.</p>
+                        <p class="preco">R$ 31,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="categoria">
+                <h3>Pratos da Casa</h3>
+                <div class="itens-grid">
+                    <div class="item-card">
+                        <span class="categoria-icone">🍗</span>
+                        <img src="./img/Filé da Vila.jfif" alt="Filé da Vila">
+                        <h4>Filé da Vila</h4>
+                        <p>Filé de frango grelhado, arroz, batatas rústicas e molho especial da casa.</p>
+                        <p class="preco">R$ 30,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍗</span>
+                        <img src="./img/Filet Parmê.jfif" alt="Filet Parmê da Casa">
+                        <h4>Filet Parmê da Casa</h4>
+                        <p>Bife empanado coberto com queijo derretido e molho de tomate caseiro. Acompanha arroz e batata frita.</p>
+                        <p class="preco">R$ 35,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍗</span>
+                        <img src="./img/Salmão Grelhado.jfif" alt="Salmão Grelhado">
+                        <h4>Salmão Grelhado</h4>
+                        <p>Salmão grelhado com ervas, purê de batatas e legumes salteados.</p>
+                        <p class="preco">R$ 42,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍗</span>
+                        <img src="./img/Carne de Sol.jfif" alt="Carne de Sol">
+                        <h4>Carne de Sol</h4>
+                        <p>Carne de sol grelhada, acompanhada de mandioca frita e vinagrete.</p>
+                        <p class="preco">R$ 38,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍗</span>
+                        <img src="./img/Risoto.jfif" alt="Risoto de Frango">
+                        <h4>Risoto de Frango</h4>
+                        <p>Risoto cremoso com cubos de frango, parmesão e toque de limão.</p>
+                        <p class="preco">R$ 33,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="categoria">
+                <h3>Bebidas</h3>
+                <div class="itens-grid">
+                    <div class="item-card">
+                        <span class="categoria-icone">🥤</span>
+                        <img src="./img/Suco Natural.jfif" alt="Suco Natural">
+                        <h4>Suco Natural</h4>
+                        <p>Laranja, abacaxi, maracujá ou limão - feito na hora, sem conservantes.</p>
+                        <p class="preco">R$ 6,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🥤</span>
+                        <img src="./img/Chá Gelado.jfif" alt="Chá Gelado Artesanal">
+                        <h4>Chá Gelado Artesanal</h4>
+                        <p>Chá preto com limão e hortelã, servido gelado.</p>
+                        <p class="preco">R$ 8,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🥤</span>
+                        <img src="./img/Refrigerante artesanal.jfif" alt="Refrigerante Artesanal">
+                        <h4>Refrigerante Artesanal</h4>
+                        <p>Gengibre com limão siciliano, levemente gaseificado.</p>
+                        <p class="preco">R$ 9,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🥤</span>
+                        <img src="./img/água com gás.jfif" alt="Água com Gás">
+                        <h4>Água com Gás</h4>
+                        <p>Água mineral com gás, servida com rodelas de limão.</p>
+                        <p class="preco">R$ 5,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="categoria">
+                <h3>Sobremesas</h3>
+                <div class="itens-grid">
+                    <div class="item-card">
+                        <span class="categoria-icone">🍨</span>
+                        <img src="./img/Pudim.jfif" alt="Pudim">
+                        <h4>Pudim</h4>
+                        <p>Pudim de leite condensado caseiro.</p>
+                        <p class="preco">R$ 10,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍨</span>
+                        <img src="./img/Brownie.jfif" alt="Brownie Cremoso">
+                        <h4>Brownie Cremoso</h4>
+                        <p>Brownie de chocolate com casquinha crocante e interior macio.</p>
+                        <p class="preco">R$ 12,00</p>
+                    </div>
+                    <div class="item-card">
+                        <span class="categoria-icone">🍨</span>
+                        <img src="./img/torta.jfif" alt="Cheesecake">
+                        <h4>Cheesecake</h4>
+                        <p>Torta de queijo com base crocante e cobertura de frutas vermelhas.</p>
+                        <p class="preco">R$ 14,00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2>Galeria de Fotos</h2>
+            <div class="galeria-grid">
+                <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="Prato de Hambúrguer">
+                <img src="https://images.pexels.com/photos/1410235/pexels-photo-1410235.jpeg" alt="Ambiente do Restaurante">
+                <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg" alt="Massa Fresca">
+                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg" alt="Ingredientes Frescos">
+                <img src="https://images.pexels.com/photos/1633525/pexels-photo-1633525.jpeg" alt="Sobremesa Delicada">
+                <img src="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg" alt="Equipe na Cozinha">
+                <img src="https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg" alt="Prato de Massa">
+                <img src="https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg" alt="Prato Regional">
+            </div>
+        </section>
+
+        <section id="horarios">
+            <h2>Horários de Funcionamento</h2>
+            <table class="horarios-table">
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Segunda</td>
+                        <td>11:00 - 22:00</td>
+                    </tr>
+                    <tr>
+                        <td>Terça</td>
+                        <td>11:00 - 22:00</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta</td>
+                        <td>11:00 - 22:00</td>
+                    </tr>
+                    <tr>
+                        <td>Quinta</td>
+                        <td>11:00 - 22:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta</td>
+                        <td>11:00 - 23:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>11:00 - 23:00</td>
+                    </tr>
+                    <tr>
+                        <td>Domingo</td>
+                        <td>12:00 - 21:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="localizacao">
+            <h2>Nosso Endereço</h2>
+            <p>Venha nos visitar na CLS 405, Bloco A, Asa Sul, Brasília - DF. Estamos em uma das áreas gastronômicas mais vibrantes da cidade!</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.123456789!2d-47.893123456789!3d-15.795123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b7c7c6b!2sAsa%20Sul%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1698765432100!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <section id="dicas">
+            <h2>Dicas Saudáveis</h2>
+            <div class="dicas-grid">
+                <div class="dica">
+                    <img src="./img/ingredientes frescos.jfif" alt="Vegetais Frescos" class="icone">
+                    <h4>Escolha Ingredientes Frescos</h4>
+                    <p>Prefira vegetais da estação para garantir sabor e nutrientes em suas refeições.</p>
+                </div>
+                <div class="dica">
+                    <img src="./img/idratesse.jfif" alt="Água" class="icone">
+                    <h4>Hidrate-se Sempre</h4>
+                    <p>Beba água ao longo do dia e experimente sucos naturais sem açúcar.</p>
+                </div>
+                <div class="dica">
+                    <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg" alt="Prato Balanceado" class="icone">
+                    <h4>Equilíbrio no Prato</h4>
+                    <p>Combine proteínas, carboidratos e gorduras boas para refeições balanceadas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="central-ajuda">
+            <h2>Central de Ajuda</h2>
+            <p>Estamos aqui para ajudar! Se você tiver dúvidas sobre pedidos, reservas, ou qualquer outro assunto, entre em contato conosco:</p>
+            <ul>
+                <li><strong>Telefone:</strong> (61) 99999-9999</li>
+                <li><strong>E-mail:</strong> <a href="mailto:contato@viladosabor.com">contato@viladosabor.com</a></li>
+                <li><strong>Horário de Atendimento:</strong> Seg-Sáb, 11h às 22h</li>
+            </ul>
+            <p>Você também pode conferir nossas <a href="#faq">Perguntas Frequentes</a> para respostas rápidas.</p>
+        </section>
+
+        <section id="faq">
+            <h2>Perguntas Frequentes</h2>
+            <details>
+                <summary>Quais são as formas de pagamento aceitas?</summary>
+                <p>Aceitamos cartões de crédito e débito (Visa, Mastercard, Elo), PIX, e dinheiro. Não aceitamos cheques.</p>
+            </details>
+            <details>
+                <summary>Vocês oferecem opções para dietas especiais?</summary>
+                <p>Sim, temos pratos vegetarianos, veganos, sem glúten e sem lactose. Consulte nosso cardápio ou fale com nossa equipe.</p>
+            </details>
+            <details>
+                <summary>Como funciona o serviço de entrega?</summary>
+                <p>Realizamos entregas em um raio de 5 km via aplicativo ou site, com taxa de entrega a partir de R$ 5,00, dependendo da distância.</p>
+            </details>
+            <details>
+                <summary>É necessário fazer reserva?</summary>
+                <p>Reservas são recomendadas para grupos acima de 6 pessoas ou em dias de grande movimento. Ligue para (61) 99999-9999.</p>
+            </details>
+            <details>
+                <summary>Vocês têm estacionamento próprio?</summary>
+                <p>Sim, oferecemos estacionamento gratuito para clientes no local, sujeito à disponibilidade de vagas.</p>
+            </details>
+            <details>
+                <summary>Quais são os protocolos de higiene adotados?</summary>
+                <p>Seguimos rigorosos protocolos de limpeza, com sanitização diária, uso de máscaras pela equipe e álcool em gel disponível.</p>
+            </details>
+        </section>
+
+        <section id="equipe">
+            <h2>Nossa Equipe</h2>
+            <div class="equipe-grid">
+                <div class="perfil">
+                    <img src="./img/chef joão.jfif" alt="Chef João">
+                    <h4>Chef João</h4>
+                    <p>Chef Principal</p>
+                    <p>"Cozinhar é transformar ingredientes em memórias felizes."</p>
+                </div>
+                <div class="perfil">
+                    <img src="./img/chef maria.jfif" alt="Chef Maria">
+                    <h4>Chef Maria</h4>
+                    <p>Chef de Cozinha</p>
+                    <p>"Cada prato conta uma história de sabor e dedicação."</p>
+                </div>
+                <div class="perfil">
+                    <img src="./img/chef carlos.jfif" alt="Chef Carlos">
+                    <h4>Chef Carlos</h4>
+                    <p>Sous-Chef</p>
+                    <p>"A perfeição está nos detalhes de cada receita."</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="avaliacoes">
+            <h2>Avaliações de Clientes</h2>
+            <div class="avaliacoes-grid">
+                <div class="avaliacao">
+                    <h4>Ana Silva</h4>
+                    <p class="estrelas">★★★★★</p>
+                    <p>"O hambúrguer clássico é incrível! Voltarei sempre!"</p>
+                </div>
+                <div class="avaliacao">
+                    <h4>Pedro Santos</h4>
+                    <p class="estrelas">★★★★☆</p>
+                    <p>"Ambiente acolhedor e pratos deliciosos. Recomendo!"</p>
+                </div>
+                <div class="avaliacao">
+                    <h4>Clara Oliveira</h4>
+                    <p class="estrelas">★★★★★</p>
+                    <p>"O pudim é o melhor que já provei. Parabéns!"</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <div class="sobre-content">
+                <p>Na Vila do Sabor, acreditamos que a comida é uma forma de expressão. Desde 2023, nossa missão é trazer pratos que combinem sabor, qualidade e carinho. Usamos ingredientes frescos e receitas tradicionais para criar momentos inesquecíveis para nossos clientes.</p>
+                <img src="./img/Sobre.jpg" alt="Imagem Sobre" class="sobre-image">
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <div class="info">
+                <p><strong>Telefone:</strong> (61) 99999-9999</p>
+                <p><strong>E-mail:</strong> <a href="mailto:contato@viladosabor.com">contato@viladosabor.com</a></p>
+                <p><strong>Horário:</strong> Seg-Sáb, 11h às 22h</p>
+            </div>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Seu nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX" pattern="[0-9]{10,11}" required>
+                <label for="assunto">Assunto:</label>
+                <select id="assunto" required>
+                    <option value="" disabled selected>Selecione um assunto</option>
+                    <option value="reserva">Reserva</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>© 2025 Vila do Sabor. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93c8dc11dea7b077',t:'MTc0NjcwNjI4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
